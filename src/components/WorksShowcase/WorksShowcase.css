@@ -1,0 +1,32 @@
+.works-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.works-info {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.works-slider {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+@media (max-width: 768px) {
+  .works-content {
+    flex-direction: column;
+  }
+
+  .works-info {
+    max-width: 100%;
+  }
+
+  .works-slider {
+    max-width: 100%;
+  }
+}

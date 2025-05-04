@@ -1,0 +1,198 @@
+.accordion-wrapper {
+  display: flex;
+  gap: 4rem; /* Increased gap for better spacing */
+  max-width: 1400px; /* Increased to accommodate the wider layout */
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.accordion-container {
+  max-width: 800px;
+  margin: 0 auto;
+  counter-reset: accordion-counter;
+  flex: 1;
+}
+
+.accordion {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.accordion-header {
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 3rem;
+  position: relative;
+  padding-left: 3.5rem;
+  color: #fff;
+}
+
+.accordion-header h3::before {
+  content: counter(accordion-counter, decimal-leading-zero);
+  counter-increment: accordion-counter;
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  display: inline-block;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  opacity: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  visibility: hidden;
+  position: relative;
+  z-index: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s ease-out; /* Added faster transition */
+}
+
+.accordion-content.open {
+  max-height: 500px;
+  padding: 15px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-content.initial-open {
+  max-height: 500px;
+  padding: 15px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-image {
+  margin-top: 15px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.accordion-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.accordion-section {
+  padding: 4rem 2rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.accordion-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.accordion-title h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.accordion-title p {
+  font-size: 4rem;
+  color: #666;
+}
+
+.accordion-left {
+  flex: 1;
+  padding-right: 4rem; /* Add padding to create gap */
+}
+
+.accordion-right {
+  flex: 0 0 600px; /* Change from flex: 1 to fixed width */
+  height: 800px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 2rem;
+  position: relative; /* Add this to position the overlay */
+}
+
+.accordion-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+  border-radius: 0 0 0 100px; /* Match the image border-radius */
+}
+
+.accordion-right img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 0 100px;
+  opacity: 1;
+  transition: opacity 0.2s ease-out; /* Added faster transition */
+}
+
+.accordion-right img.fade {
+  opacity: 0;
+}
+
+.what-we-do__title,
+.what-we-do__description,
+.accordion-header h3,
+.accordion-content {
+  color: #fff;
+}
+
+.what-we-do__title,
+.accordion-header h3::before {
+  font-size: 1.3rem;
+}
+
+.what-we-do__description,
+.accordion-header h3 {
+  font-size: 3rem;
+}
+
+.view-all-button {
+  position: relative;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #333;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.button-wrapper {
+  position: relative;
+  text-align: left;
+  padding: 0 15px;
+}
