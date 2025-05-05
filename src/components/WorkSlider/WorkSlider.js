@@ -57,7 +57,7 @@ const WorkSlider = () => {
   return (
     <div className="carousel">
       <div className="slides-container">
-        {getVisibleSlides().map((slide, index) => (
+        {getVisibleSlides().map((slide, index) => ( 
           <div key={slide.index} className="slide">
             <img src={slide.image} alt={slide.title} />
             <h3>{slide.title}</h3>
