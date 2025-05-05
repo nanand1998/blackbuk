@@ -1,5 +1,6 @@
 import React from "react";
 import "./Overview.css";
+import { motion } from "framer-motion";
 
 import dataAnalysis1 from "../../assets/icons/dataAnalysis1.png";
 import aiIntegrationIcon from "../../assets/icons/aiIntegrationIcon.png";
@@ -53,27 +54,52 @@ const Overview = () => {
   return (
     <section className="overview-section">
       <div className="overview-content">
-        <p className="overview-paragraph-text">
+        <motion.p
+          className="overview-paragraph-text"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           Leveraging half-decade of expertise, Utility collaborates with
           forward-thinking client partners to develop cutting-edge products.
-        </p>
-        <div className="tech-services-container">
+        </motion.p>
+        <motion.div
+          className="tech-services-container"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
           {services.map((service, index) => (
-            <div key={index} className="service-container">
+            <motion.div
+              key={index}
+              className="service-container"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <img
                 src={service.icon}
                 alt={service.alt}
                 className="service-icon"
               />
               <p>{service.title}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         <div className="creative-services-container"></div>
-        <button className="view-all-services-btn">
+        <motion.button
+          className="view-all-services-btn"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
           View All Services
           <img src={arrowUpRightIcon} alt="arrow" />
-        </button>
+        </motion.button>
       </div>
     </section>
   );

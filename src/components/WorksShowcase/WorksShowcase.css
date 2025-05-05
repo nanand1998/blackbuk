@@ -17,6 +17,17 @@
   max-width: 70%;
 }
 
+.our-work-heading {
+  font-size: 20.8px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.works-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 768px) {
   .works-content {
     flex-direction: column;

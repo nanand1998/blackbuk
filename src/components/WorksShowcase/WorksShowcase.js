@@ -8,6 +8,7 @@ const WorksShowcase = () => {
     <div className="works-showcase">
       <div className="works-content">
         <div className="works-info">
+          <h1 className="our-work-heading">Our Work</h1>
           <h2 className="works-heading">
             Driving Innovating with Domestic and International Clients.
           </h2>
