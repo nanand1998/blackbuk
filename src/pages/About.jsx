@@ -41,12 +41,12 @@ const About = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4">Our Story</h2>
-            <p className="text-gray-400 leading-relaxed">
+            {/* <p className="text-gray-400 leading-relaxed">
               Founded by engineers, for engineers. BlackBuck Technologies
               started as a small collective of freelance developers tired of
               "spaghetti code" and sub-par agency work. We banded together to
               create a standard of quality that we could be proud of.
-            </p>
+            </p> */}
           </div>
         </div>
 
