@@ -41,12 +41,12 @@ const About = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-4">Our Story</h2>
-            {/* <p className="text-gray-400 leading-relaxed">
-              Founded by engineers, for engineers. BlackBuck Technologies
-              started as a small collective of freelance developers tired of
-              "spaghetti code" and sub-par agency work. We banded together to
-              create a standard of quality that we could be proud of.
-            </p> */}
+            <p className="text-gray-400 leading-relaxed">
+              Founded by engineers, for engineers. BlackBuk Technologies started
+              as a small collective of freelance developers tired of "spaghetti
+              code" and sub-par agency work. We banded together to create a
+              standard of quality that we could be proud of.
+            </p>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-bold mb-3">Nirlep Anand</h3>
               <p className="text-gray-400 leading-relaxed">
-                Founder of Blackbuck Technologies with 7+ years of experience in
+                Founder of Blackbuk Technologies with 7+ years of experience in
                 business operations, strategic planning, and team leadership.
               </p>
               <p className="text-gray-400 leading-relaxed">

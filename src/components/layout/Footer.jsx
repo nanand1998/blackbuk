@@ -1,6 +1,8 @@
 import { Code2, Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import BlackbuckLogo from "../../assets/BlackbuckLogo.jpeg";
+
 const Footer = () => {
   return (
     <footer className="bg-black border-t border-white/5 pt-16 pb-8">
@@ -9,11 +11,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="bg-blue-600 p-1.5 rounded-lg">
-                <Code2 className="w-5 h-5 text-white" />
-              </div>
+              <img
+                src={BlackbuckLogo}
+                alt="BlackBuck Logo"
+                className="w-6 h-6 rounded-lg"
+              />
               <span className="text-lg font-bold">
-                BlackBuck<span className="text-blue-500">Tech</span>
+                BlackBuk<span className="text-blue-500"></span>
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">

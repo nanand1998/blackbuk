@@ -133,14 +133,14 @@ const Home = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6"
             >
               <Link to="/contact">
-                <Button className="w-full sm:w-auto h-12 px-8 text-base rounded-full shadow-[0_0_30px_-10px_rgba(34,197,94,0.6)] hover:shadow-[0_0_50px_-10px_rgba(34,197,94,0.8)] border border-green-500/20">
+                <Button className="w-full sm:w-auto h-12 px-12 text-base rounded-full shadow-[0_0_30px_-10px_rgba(34,197,94,0.6)] hover:shadow-[0_0_50px_-10px_rgba(34,197,94,0.8)] border border-green-500/20 backdrop-blur-md bg-green-500/10">
                   Start Your Project <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
               <Link to="/work">
                 <Button
                   variant="secondary"
-                  className="w-full sm:w-auto h-12 px-8 text-base rounded-full border border-white/10 hover:bg-white/10"
+                  className="w-full sm:w-auto h-12 px-8 text-base rounded-full border border-white/10 hover:bg-white/10 backdrop-blur-md bg-white/5"
                 >
                   Explore Portfolio
                 </Button>
@@ -165,7 +165,10 @@ const Home = () => {
               speed, security, and scalability.
             </p>
             <Link to="/about">
-              <Button variant="outline" className="mt-4">
+              <Button
+                variant="outline"
+                className="mt-4 backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10"
+              >
                 Read Our Story
               </Button>
             </Link>
@@ -262,7 +265,7 @@ const Home = () => {
               business.
             </p>
             <Link to="/contact">
-              <Button className="mx-auto h-14 px-10 text-lg">
+              <Button className="mx-auto h-10 px-10 text-lg rounded-full backdrop-blur-md bg-green-500/10 border border-green-500/20 shadow-[0_0_30px_-10px_rgba(34,197,94,0.6)] hover:shadow-[0_0_50px_-10px_rgba(34,197,94,0.8)]">
                 Start Your Project
               </Button>
             </Link>

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Code2 } from "lucide-react";
 import { cn } from "../../lib/utils";
 import Button from "../ui/Button";
+import BlackbuckLogo from "../../assets/BlackbuckLogo.jpeg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,9 +42,11 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
-            <Code2 className="w-6 h-6 text-white" />
-          </div>
+          <img
+            src={BlackbuckLogo}
+            alt="Blackbuck Logo"
+            className="h-8 w-auto"
+          />
           <span className="text-xl font-bold tracking-tight">BlackBuk</span>
         </Link>
 
